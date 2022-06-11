@@ -11,10 +11,10 @@ public:
                     j=mp.find(s[i])->second+1; // update the j
                 
             }
-            mp[s[i]]=i;
-            len=max(len,i-j+1);
+            mp[s[i]]=i; // mark the elements and their index in the map
+            len=max(len,i-j+1); // update the length
         }
-        return len;
+        return len; // pro coder poty
     }
     
 };
