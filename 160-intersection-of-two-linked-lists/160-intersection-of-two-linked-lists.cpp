@@ -16,12 +16,12 @@ public:
         int l1=0;
         int l2=0;
         
-        while(temp1!=NULL)
+        while(temp1!=NULL) //calculating length of temp1
         {
             l1++;
             temp1=temp1->next;
         }
-        while(temp2!=NULL)
+        while(temp2!=NULL) //calculating length of temp2
         {
             l2++;
             temp2=temp2->next;
