@@ -2,10 +2,10 @@ class Solution {
 public:
     bool isHappy(int n) {
         set<int> s;
-        
+        int value,r;
         while(1)
         {
-            int value = 0,r;
+            value = 0;
             while(n)
             {
                 r = n%10;
