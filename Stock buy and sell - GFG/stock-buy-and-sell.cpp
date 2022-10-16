@@ -13,15 +13,43 @@ public:
     //Function to find the days of buying and selling stock for max profit.
     vector<vector<int> > stockBuySell(vector<int> A, int n){
         // code here
+        int buy = 0,sell = 0,flag = 0;
         vector<vector<int>> ans;
         for(int i=1;i<n;i++)
         {
-            if(A[i]-A[i-1]>0)
+            if(A[i]>=A[i-1] && A[i]!=A[buy])
             {
-                ans.push_back({i-1,i});
+                sell++;
+                flag = 1;
+            }
+            else if(buy == sell)
+            {
+                buy = i;
+                sell = i;
+            }
+            else
+            {
+                vector<int> vec;
+                vec.push_back(buy);
+                vec.push_back(sell);
+                ans.push_back(vec);
+                
+                buy = i;
+                sell = i;
             }
         }
-        return ans;
+        if(flag == 0)
+        {
+            return ans;
+        }
+        else if(buy!=n-1 && sell==n-1)
+        {
+            vector<int> temp;
+            temp.push_back(buy);
+            temp.push_back(sell);
+            ans.push_back(temp);
+            return ans;   
+        }
     }
 };
 
