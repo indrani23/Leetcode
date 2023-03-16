@@ -36,6 +36,8 @@ public:
         insertAtBottom(st,num);
     }
 };
+//TC : O(n^2)
+//SC :
 
 //{ Driver Code Starts.
 
