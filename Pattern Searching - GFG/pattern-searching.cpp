@@ -12,7 +12,7 @@ public:
 	{
 	    // Your code goes here
 	    int ans = 0;
-	    if(text.find(pat)!=string::npos)
+	    if(text.find(pat)!=string::npos) //means not present until the end of string
 	    {
 	        ans = 1;
 	    }
