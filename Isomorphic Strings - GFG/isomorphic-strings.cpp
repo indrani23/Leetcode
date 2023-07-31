@@ -27,7 +27,7 @@ class Solution
         int m2[256] = {0};
         for(int i=0;i<n;i++)
         {
-            if(!m1[str1[i]] & !m2[str2[i]])
+            if(!m1[str1[i]] && !m2[str2[i]])
             {
                 m1[str1[i]] = str2[i];
                 m2[str2[i]] = str1[i];
